@@ -1,5 +1,5 @@
-app = "paper-review"
-primary_region = "iad"
+app = 'paper-review'
+primary_region = 'iad'
 
 [build]
 
@@ -13,14 +13,12 @@ primary_region = "iad"
   auto_stop_machines = false
   auto_start_machines = true
   min_machines_running = 1
+  processes = ['app']
 
-[[services]]
-  protocol = "tcp"
-  internal_port = 8090
-
-  [[services.ports]]
-    port = 8090
-    handlers = ["tls", "http"]
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
 
 [env]
   NODE_ENV = "production"

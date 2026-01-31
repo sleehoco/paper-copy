@@ -25,6 +25,7 @@ COPY --from=builder /app/build build/
 COPY --from=builder /app/node_modules node_modules/
 COPY package.json .
 COPY start.sh .
+COPY pb_migrations /app/pb_migrations
 RUN chmod +x start.sh
 
 ENV NODE_ENV=production
