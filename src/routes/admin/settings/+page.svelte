@@ -1,7 +1,7 @@
 <script lang="ts">
 	type Provider = 'groq' | 'xai';
 
-	let primaryProvider: Provider = $state('groq');
+	let primaryProvider: Provider = $state('xai');
 	let fallbackEnabled = $state(true);
 	let groqKey = $state('sk-groq-xxxxxxxxxxxx');
 	let xaiKey = $state('xai-xxxxxxxxxxxx');

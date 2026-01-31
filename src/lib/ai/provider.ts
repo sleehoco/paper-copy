@@ -12,8 +12,8 @@ interface ProviderConfig {
 }
 
 let config: ProviderConfig = {
-	primary: 'groq',
-	fallbackEnabled: true
+	primary: 'xai',
+	fallbackEnabled: false
 };
 
 export function configureProviders(newConfig: Partial<ProviderConfig>) {
